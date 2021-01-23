@@ -52,6 +52,6 @@ Nos links abaixo ainda encontramos formas de cobinar Cookies e JWT:
 
 
 
-###### Referências:
+###### Outras Referências:
 
 <https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies>
