@@ -41,4 +41,10 @@ E para domínios diferentes? Sabemos que não é possível utilizar Cookie/Sessi
 <https://stackoverflow.com/questions/40527124/single-sign-on-sso-using-jwt>
 
 
+
+
+
+
+###### Referências:
+
 <https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies>
