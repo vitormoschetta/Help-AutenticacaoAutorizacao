@@ -4,11 +4,13 @@
 
 Diferente do _LocalStorage_ e _SessionStorage_, _Cookies_ podem ser armazenados por tempo indeterminado, permanecendo salvo mesmo ao fechar o browser. Graças aos Cookies podemos salvar nossas crendencias no navegador, e abrir nossas redes sociais no dia seguinte sem precisar informar o login novamente.
 
-Como podemos observar, **Cookies nao estão diretamente ligados à autenticação**, mas na persistência de informações no browser. Acontece que essa capacidade de persistência duradoura do Cookie o associou à **autenticação baseada em Session**.
+Como podemos observar, **Cookies nao estão diretamente ligados à autenticação**, mas na persistência de informações no browser. Acontece que essa capacidade de persistência duradoura do Cookie o associou à **autenticação baseada em Session**. 
 
-Neste formato de autenticação os **dados do usuário NÃO estão no Cookie, mas em uma Session na memória do Server**. Esta session é criada com um ID de identificação, e é justamente este ID que é passado para o _Client_ persistir no _Cookie/browser_. Logo **o Cookie possui apenas o ID da Session que contém os dados do Usuário autenticado.**
+Neste formato de autenticação os **dados do usuário NÃO estão no Cookie, mas em uma Session na memória do Server**. Esta session é criada no servidor com um ID de identificação, e é justamente este ID que é passado para o _Client_ persistir no _Cookie/browser_. Logo **o Cookie possui apenas o ID da Session que contém os dados do Usuário autenticado.**
 
-Perceba que na autenticação com Cookie/Session é necessário manter um estado na memória do Servidor. Por isso usamos o termo **autenticação com estado**.
+Obs: Um _Cookie_ pode ser definido no _Client_ ou no _Server_, e quando definido no _Server_ é utilizado uma segurança adicional que os torna visíveis apenas para servidores, e não para o javascript do lado do cliente.
+
+Perceba que na autenticação com _Cookie/Session_ é necessário manter um estado na memória do Servidor. Por isso usamos o termo **autenticação com estado**.
 
 Dentro do escopo de autenticação, a função do Cookie é similar ao JWT, porém, possuem casos de uso diferente.
 
