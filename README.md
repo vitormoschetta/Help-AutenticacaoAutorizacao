@@ -6,7 +6,7 @@ Diferente do _LocalStorage_ e _SessionStorage_, _Cookies_ podem ser armazenados 
 
 Como podemos observar, **Cookies nao estão diretamente ligados à autenticação**, mas na persistência de informações no browser. Acontece que essa capacidade de persistência duradoura do Cookie o associou à **autenticação baseada em Session**.
 
-Neste formato de autenticação os dados do usuário não estão no Cookie, mas em uma Session na memória do Server. Esta session é criada com um
+Neste formato de autenticação os **dados do usuário NÃO estão no Cookie**, mas em uma Session na memória do Server. Esta session é criada com um
 ID de identificação, e é justamente este ID que é passado para o Client persistir no Cookie. Logo o Cookie possui apenas o ID da Session que 
 contém os dados do Usuário autenticado.
 
