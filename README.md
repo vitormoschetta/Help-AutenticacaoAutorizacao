@@ -27,6 +27,10 @@ Dá-se o início do  **OpenId Connect**, que é a capacidade de permitir que os 
 Outro conceito que passou a ser muito usado foi o **Federation Gateway**, que é exatamente a capacidade de se efetuar o login através de 
 um provedor externo, como por exemplo, logar com suas redes sociais ou conta do Google.
 
+Mas é aí também que entramos em outra discussão de segurança: Se para validar um JWT precisamos da _Chave/Segredo_, isso quer dizer que precisamos compartilhar um Segredo de Servidor com vários Clients. Como podemos garantir que esses clientes estão armazenando a chave de forma segura? 
+
+Em resposta a essa questão foi criado um segundo algoritimo de autenticação para JWT onde existem duas chaves: uma chave Privada que fica no servidor de autenticação, e só ela pode gerar um Token. E uma chave Pública que é concedida aos Clientes. Esta segunda só serve para Validar os Tokens, logo, não há problema se ela for exposta.
+
 
 
 <https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies>
