@@ -8,7 +8,7 @@ Como podemos observar, **Cookies nao estão diretamente ligados à autenticaçã
 
 Neste formato de autenticação os **dados do usuário NÃO estão no Cookie, mas em uma Session na memória do Server**. Esta session é criada no servidor com um ID de identificação, e é justamente este ID que é passado para o _Client_ persistir no _Cookie/browser_. Logo **o Cookie possui apenas o ID da Session que contém os dados do Usuário autenticado.**
 
-Obs: Um _Cookie_ pode ser definido no _Client_ ou no _Server_, e quando definido no _Server_ é utilizado uma segurança adicional que os torna visíveis apenas para servidores, e não para o javascript do lado do cliente.
+Obs: Um _Cookie_ pode ser definido no _Client_ ou no _Server_, e quando definido no _Server_ é utilizado uma segurança adicional (_HttpOnly_) que os torna visíveis apenas para servidores, e não para o javascript do lado do cliente. Este é mais voltado para autenticação.
 
 Perceba que na autenticação com _Cookie/Session_ é necessário manter um estado na memória do Servidor. Por isso usamos o termo **autenticação com estado**.
 
@@ -26,3 +26,7 @@ Dá-se o início do  **OpenId Connect**, que é a capacidade de permitir que os 
 
 Outro conceito que passou a ser muito usado foi o **Federation Gateway**, que é exatamente a capacidade de se efetuar o login através de 
 um provedor externo, como por exemplo, logar com suas redes sociais ou conta do Google.
+
+
+
+<https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies>
