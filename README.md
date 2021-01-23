@@ -33,4 +33,11 @@ Em resposta a essa questão foi criado um segundo algoritimo de autenticação p
 
 
 
+### Single Sign-On (SSO)
+Login integrado. O SSO dá acesso a muitos aplicativos inserindo credenciais apenas uma vez.
+Em um cenário interno, corporativo, isso é facilmente possível utilizando Cookie e Session. Uma vez que as Sessões podem se extender à Subdomínios.
+
+E para domínios diferentes? Sabemos que não é possível utilizar Cookie/Session em domínios diferentes. Teríamos que usar, portanto, JWT. Mas a pergutna que faço é: Quando o App cliente for direcionado para o Servidor de Autenticação, uma vez que ele não mantém estado, como saberá quem é este usuário? Acredito que para criar um SSO com JWT será necessário manter um estado de sessão no servidor. ainda preciso pesquisar sobre isso..
+
+
 <https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies>
