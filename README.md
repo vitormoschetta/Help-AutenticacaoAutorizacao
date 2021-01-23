@@ -1,4 +1,4 @@
-# Help-AutenticacaoAutorizacao
+# Conceitos de Autenticação e Autorização
 
 ### JWT vs Cookies (Correto: JWT vs Session) - História
 
