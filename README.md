@@ -20,7 +20,7 @@ Por este motivo foi necessário o desenvolvimento de um outro método de autenti
 
 A grande questão aqui é: Como saber que este Token que trafega com os dados do Usuário via HTTP é válido? Como os Servidores poderiam validar esta solicitação? 
 
-É aí que entra o **Secret**, a Chave. O JWT é montado (ele não é criptografado, pois é um padrão aberto) a partir das informações/claims do Usuário + sequência de caracteres conhecidos como Secret/Chave. Qualquer um pode decifrar o conteúdo de um JWT, mas apenas quem possui esta Chave pode validá-lo.
+É aí que entra o **Secret**, a Chave. O JWT é montado a partir das informações/claims do Usuário (_Payload_) + sequência de caracteres conhecidos como Secret/Chave (_Signature_). Qualquer um pode decifrar _Paylod_ (corpo) de um JWT, que é a parte  que contém as informações do usuário. Mas, somente quem possui a Chave pode validar a assintura desse JWT. 
 
 Dá-se o início do  **OpenId Connect**, que é a capacidade de permitir que os usuários sejam autenticados por sites cooperantes (conhecidos como partes confiáveis ou RP) usando um serviço de autorização de terceiros.  
 
@@ -29,7 +29,14 @@ um provedor externo, como por exemplo, logar com suas redes sociais ou conta do 
 
 Mas é aí também que entramos em outra discussão de segurança: Se para validar um JWT precisamos da _Chave/Segredo_, isso quer dizer que precisamos compartilhar um Segredo de Servidor com vários Clients. Como podemos garantir que esses clientes estão armazenando a chave de forma segura? 
 
-Em resposta a essa questão foi criado um segundo algoritimo de autenticação para JWT onde existem duas chaves: uma chave Privada que fica no servidor de autenticação, e só ela pode gerar um Token. E uma chave Pública que é concedida aos Clientes. Esta segunda só serve para Validar os Tokens, logo, não há problema se ela for exposta.
+Em resposta a essa questão foi criado um segundo algoritimo de autenticação  para JWT onde existem duas chaves: uma chave Privada que fica no servidor de autenticação, e só ela pode gerar um Token. E uma chave Pública que é concedida aos Clientes. Esta segunda só serve para Validar os Tokens, logo, não há problema se ela for exposta.
+
+Logo, o JWT utiliza dois algoritmos básicos de criptografia para a Chave/Segredo: 
+
+1. **HS256**: Algoritmo que utiliza a mesma chave tanto para gerar quanto para validar a assinatura de um JWT.
+
+2. **RS256**: Algoritmo que utiliza um par de chaves: Chave privada para gerar a assinatura do JWT, e Chave publica para validar a assinatura do JWT.
+<br>
 
 
 
