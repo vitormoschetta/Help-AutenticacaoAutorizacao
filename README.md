@@ -36,7 +36,11 @@ Logo, o JWT utiliza dois algoritmos básicos de criptografia para a Chave/Segred
 1. **HS256**: Algoritmo que utiliza a mesma chave tanto para gerar quanto para validar a assinatura de um JWT.
 
 2. **RS256**: Algoritmo que utiliza um par de chaves: Chave privada para gerar a assinatura do JWT, e Chave publica para validar a assinatura do JWT.
-<br>
+
+Outra pergunga: E se um JWT é roubado, então o ladrão pode continuar usando o JWT até a sua experiação?
+R: Sim, alguns usam a estratégia de tempos curtos para expiração para minimizar esse problema.
+
+Outra questão a ser observada é: De onde DEVEM vir os _requests_/solicitações? Quando só podemos aceitar solicitações de URLs específicas, fica mais fácil evitar esse tipo de roubo e uso indevido de JWTs usando CORS.
 
 
 
